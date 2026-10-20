@@ -2077,7 +2077,7 @@ body[data-view="login"] .bottom, body[data-view="login"] .fab { display: none; }
   function importFile(file) {
     const fr = new FileReader();
     fr.onload = () => {
-      let obj; try { obj = JSON.parse(fr.result); } catch (e) { return openSheet('Archivo no válido', '<p>El archivo no es un JSON válido. Elige un respaldo descargado desde esta aplicación.</p>'); }
+      let obj; try { obj = JSON.parse(String(fr.result).replace(/^\uFEFF/, '').trim()); } catch (e) { return openSheet('Archivo no válido', '<p>El archivo no es un JSON válido. Elige un respaldo descargado desde esta aplicación.</p>'); }
       const v = C.validateBackup(obj);
       if (!v.ok) return openSheet('Respaldo con errores', '<p>No se importó nada. Se encontraron ' + v.totalErrors + ' problemas:</p><ul class="plain">' + v.errors.map((x) => '<li>' + esc(x) + '</li>').join('') + '</ul>');
       const cnt = countKinds(v.records); const mg = C.mergeRecords(S.records, v.records);
