@@ -1,2 +1,1 @@
-// Datos de tu proyecto Supabase (Settings → API). Vacío = guardar solo en este dispositivo.
-window.SUPA_CONFIG = { url: '', key: '' };
+window.SUPA_CONFIG = { url: 'https://itrmcnefzsepralaprgj.supabase.co', key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0cm1jbmVmenNlcHJhbGFwcmdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0NzA1NzIsImV4cCI6MjEwODA0NjU3Mn0.t1VNie3d9ub9jZwoHbTCC1TQouhZ_a473GaEAET4ybM' };
